@@ -12,8 +12,8 @@ public class Main {
         Teacher teacher2 = new Teacher("alemayehu", "database");
 
         //Add Student and Teacher objects into the College object
-         college.addStudent(student1);
-       college.addStudent(student2);
+        college.addStudent(student1);
+        college.addStudent(student2);
         college.addTeacher(teacher1);
         college.addTeacher(teacher2);
         // Print some details to test;
@@ -22,8 +22,12 @@ public class Main {
             System.out.println("CCI");
             System.out.println("Name:" + college.getName());
         }
-          Arrays.toString(student.getGrades()));
-            }
+        System.out.println("Students:");
+        for (Student student : college.getStudents()) {
+
+            System.out.print("Name: " + student.getName() + ", ID:" + student.getId());
+            System.out.println(" Grade: " + Arrays.toString(student.getGrades()));
+        }
 
         System.out.println("\nTeachers:");
         for (Teacher teacher : college.getTeachers()) {
